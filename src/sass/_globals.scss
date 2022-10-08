@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+
+@font-face {
+  font-family: "HelveticaNeueLTW05-57Cond";
+  src: local("HelveticaNeueLTW05-57Cond"),
+    url("../assets/fonts/Helvetica-Neue/HelveticaNeueLTW05-57Cond.woff2") format("woff2"),
+    url("../assets/fonts/Helvetica-Neue/HelveticaNeueLTW05-57Cond.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+$theme-heading: #669bbc;
+$theme-accent: #f3a712;
+$theme-light: #FFFFFF;
+$theme-body-text: #29335c;
+
+@mixin screen-sm {
+  @media (min-width: 576px) { @content; }
+}
+
+@mixin mq($screen-width) {
+   @media (min-width: #{$screen-width}px) { @content; }
+}
