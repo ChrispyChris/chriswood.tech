@@ -1,5 +1,5 @@
-import React from "react";
-import { ReactElement } from "react";
+import React, { ReactElement } from "react";
+import { Link } from "react-router-dom";
 import "../sass/home.scss";
 
 function Home(): ReactElement {
@@ -19,7 +19,7 @@ function Home(): ReactElement {
       </div>
 
       <div className="home__projects-wrapper">
-        <p className="home__projects">Click <a href="./projects.tsx" className="home__projects-link">here</a> to check out some of the projects I've worked on, or check out my GitHub.</p>
+        <p className="home__projects">Click <Link to="/projects" className="home__projects-link">here</Link> to check out some of the projects I've worked on, or check out my GitHub.</p>
       </div>
     </div>
   );
