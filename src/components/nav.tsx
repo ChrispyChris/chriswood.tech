@@ -3,10 +3,10 @@ import "../sass/nav.scss";
 import { Link } from "react-router-dom";
 import { ReactElement } from "react";
 
-interface NavLink {
+type NavLink = {
   name: string;
   url: string;
-}
+};
 
 export const navItems: NavLink[] = [
   { name: "Home", url: "/" },
@@ -23,6 +23,6 @@ function Nav(): ReactElement {
       </ul>
     </nav>
   );
-}
+};
 
 export default Nav;
