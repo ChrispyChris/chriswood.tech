@@ -30,6 +30,7 @@
   "author": "Chris Wood",
   "dependencies": {
     "@types/marked": "^4.0.7",
+    "@types/node": "^18.11.0",
     "dompurify": "^2.4.0",
     "marked": "^4.1.1",
     "react": "^18.2.0",
