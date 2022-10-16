@@ -9,12 +9,12 @@ $font-sm: clamp(2rem, 0.7143rem + 3.5714vw, 4rem);
 ***************************************/
 
 .hide {
-  overflow: hidden !important;
+    overflow: hidden !important;
 }
 
 .hamburger-transition {
-  animation: fade-in 500ms forwards;
-  right: 0vh !important;
+    animation: fade-in 500ms forwards;
+    right: 0vh !important;
 }
 
 /***************************************
@@ -25,78 +25,78 @@ $font-sm: clamp(2rem, 0.7143rem + 3.5714vw, 4rem);
 
 
 .mobile-nav-hamburger--open {
-  align-items: center;
-  background-color: $theme-light;
-  display: inline-flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: scroll;
-  position: fixed;
-  right: -100vh;
-  transition: right 300ms cubic-bezier(1, 0, 0, 1);
-  width: 100%;
+    align-items: center;
+    background-color: $theme-light;
+    display: inline-flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: scroll;
+    position: fixed;
+    right: -100vh;
+    transition: right 300ms cubic-bezier(1, 0, 0, 1);
+    width: 100%;
 
-  .mobile-nav__item {
-    align-self: center;
-    display: inline-block;
-    text-align: center;
-    width: fit-content;
+    .mobile-nav__item {
+      align-self: center;
+      display: inline-block;
+      text-align: center;
+      width: fit-content;
 
-    &:first-of-type { margin-top: 50px; }
-  }
+      &:first-of-type { margin-top: 50px; }
+    }
 
-  .mobile-nav__link {
-    color: $theme-accent;
-    font-family: "Work Sans", sans-serif;
-    font-size: 3rem;
-    font-weight: 800;
-    padding: 0; 
-    position: relative;
-    text-align: center;
-    text-shadow: 3px 0px 2px rgba(0, 0, 0, 1);
-  }
+    .mobile-nav__link {
+      color: $theme-accent;
+      font-family: "Work Sans", sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      padding: 0; 
+      position: relative;
+      text-align: center;
+      text-shadow: 3px 0px 2px rgba(0, 0, 0, 1);
+    }
 
-  .mobile-nav__link:hover, .mobile-nav__link:focus {
-    border: none;
-    color: $theme-light;
-    text-shadow: 
-     -1px -1px 0 $theme-accent,  
-     1px -1px 0 $theme-accent,
-     -1px 1px 0 $theme-accent,
-     1px 1px 0 $theme-accent,
-     3px 0px 2px $theme-accent;
-  }
+    .mobile-nav__link:hover, .mobile-nav__link:focus {
+      border: none;
+      color: $theme-light;
+      text-shadow: 
+       -1px -1px 0 $theme-accent,  
+       1px -1px 0 $theme-accent,
+       -1px 1px 0 $theme-accent,
+       1px 1px 0 $theme-accent,
+       3px 0px 2px $theme-accent;
+    }
 }
 
 .mobile-nav-hamburger--closed {
-  align-items: center;
-  animation: fade-out 500ms forwards;
-  background-color: $theme-light;
-  display: inline-flex;
-  flex-direction: column;
-  height: 100vh;
-  position: fixed;
-  right: -100vh;
-  transition: right 300ms cubic-bezier(1, 0, 0, 1);
-  width: 100%;
+    align-items: center;
+    animation: fade-out 500ms forwards;
+    background-color: $theme-light;
+    display: inline-flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    right: -100vh;
+    transition: right 300ms cubic-bezier(1, 0, 0, 1);
+    width: 100%;
 
-  .mobile-nav__item {
-    align-self: center;
-    display: inline-block;
-    text-align: center;
-    width: fit-content;
+    .mobile-nav__item {
+      align-self: center;
+      display: inline-block;
+      text-align: center;
+      width: fit-content;
 
-    &:first-of-type { margin-top: 50px; }
-  }
+      &:first-of-type { margin-top: 50px; }
+    }
 
-  .mobile-nav__link {
-    color: $theme-accent;
-    font-family: "Work Sans", sans-serif;
-    font-size: 3rem;
-    font-weight: 800;
-    padding: 0; 
-    position: relative;
-    text-align: center;
-    text-shadow: 3px 0px 2px rgba(0, 0, 0, 1);
-  }
+    .mobile-nav__link {
+      color: $theme-accent;
+      font-family: "Work Sans", sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      padding: 0; 
+      position: relative;
+      text-align: center;
+      text-shadow: 3px 0px 2px rgba(0, 0, 0, 1);
+    }
 }

@@ -5,12 +5,12 @@ import useMobileComponent from "../hooks/useMobileComponent.js";
 
 function Header(): ReactElement {
 
-  const isMobile: boolean = useMobileComponent(575);
-  return(
-    <>
-    {isMobile ? <MobileNav /> : <Nav />}
-    </>
-  );
+    const isMobile: boolean = useMobileComponent(575);
+    return(
+      <>
+      {isMobile ? <MobileNav /> : <Nav />}
+      </>
+    );
 }
 
 export default Header;

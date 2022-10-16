@@ -5,81 +5,81 @@ $font-med: clamp(1.25rem, 0.625rem + 2.22222vw, 2.425rem);
 $font-weight-sm: 600;
 
 .home__grid {
-  color: $theme-body-text;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  font-family: "HelveticaNeueLTW05-57Cond", normal;
-  font-weight: $font-weight-sm;
-  margin: 0 1.5em 0;
-  text-align: left;
+    color: $theme-body-text;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-family: "HelveticaNeueLTW05-57Cond", normal;
+    font-weight: $font-weight-sm;
+    margin: 0 1.5em 0;
+    text-align: left;
 }
 
 .home__about {
-  font-size: $font-sm;
-  line-height: 2;
+    font-size: $font-sm;
+    line-height: 2;
 
-  @include screen-sm {
-    font-size: $font-med;
-  }
+    @include screen-sm {
+      font-size: $font-med;
+    }
 }
 
 .home__about-wrapper {
-  margin: 2em 0em 2em;
-  width: 100%;
+    margin: 2em 0em 2em;
+    width: 100%;
 }
 
 .home__projects {
-  font-size: $font-sm;
+    font-size: $font-sm;
 
-  @include screen-sm {
-    font-size: $font-med;
-  }
+    @include screen-sm {
+      font-size: $font-med;
+    }
 }
 
 .home__projects-wrapper {
-  margin-top: 15em;
+    margin-top: 15em;
 }
 
 .home__projects-link {
-  color: $theme-body-text;
-  text-decoration: underline;
-  text-decoration-color: $theme-accent;
+    color: $theme-body-text;
+    text-decoration: underline;
+    text-decoration-color: $theme-accent;
 }
 
 .home__title {
-  color: $theme-heading;
-  font-weight: 800;
-  font-size: 3.30rem;
-  margin-top: 1em;
-  text-shadow: 1.5px 1px 1px black;
+    color: $theme-heading;
+    font-weight: 800;
+    font-size: 3.30rem;
+    margin-top: 1em;
+    text-shadow: 1.5px 1px 1px black;
 
-  @include screen-sm {
-    font-size: 4rem;
-  }
+    @include screen-sm {
+      font-size: 4rem;
+    }
 }
 
 .home__title-wrapper {
-  margin-bottom: 1.5em;
-  margin-top: 1em;
-  width: 100%;
+    margin-bottom: 1.5em;
+    margin-top: 1em;
+    width: 100%;
 }
 
 .home__title--su {
-  color: $theme-accent;
+    color: $theme-accent;
 }
 
 .home__work {
-  font-size: $font-sm;
-  line-height: 2;
+    font-size: $font-sm;
+    line-height: 2;
 
-  @include screen-sm {
-    font-size: $font-med;
-  }
+    @include screen-sm {
+      font-size: $font-med;
+    }
 }
 
 .home__work-wrapper {
-  width: 100%;
+    width: 100%;
 }
 
 /***************************************

@@ -7,7 +7,7 @@
 ***************************************/
 
 .hide {
-  overflow: hidden !important;
+    overflow: hidden !important;
 }
 
 /***************************************
@@ -17,51 +17,50 @@
 ***************************************/
 
 .nav__container {
-  @include screen-sm {
-  }
+    @include screen-sm {
+    }
 }
 
 .nav__item {
-  @include screen-sm {
-  }
+    @include screen-sm {
+    }
 }
 
 .nav__link {
-  @include screen-sm {
-  font-size: 1.75rem;
-  height: 100px;
-  padding: .25em;
-  }
+    @include screen-sm {
+    font-size: 1.75rem;
+    height: 100px;
+    padding: .25em;
+    }
 }
 
 .nav__link:hover {
-  @include screen-sm {
-  color: $theme-light;
-  padding-bottom: 0.35em;
-  }
+    @include screen-sm {
+    color: $theme-light;
+    padding-bottom: 0.35em;
+    }
 }
 
 .nav__link::after {
-  @include screen-sm {
-  background-color: $theme-accent;
-  border-radius: 10%;
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  transform: scale(0);
-  transform-origin: center;
-  transition: transform 0.25s ease-in;
-  top: 0;
-  width: 100%;
-  }
+    @include screen-sm {
+    background-color: $theme-accent;
+    border-radius: 10%;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 0.25s ease-in;
+    top: 0;
+    width: 100%;
+    }
 }
 
 .nav__link:hover::after {
-  @include screen-sm {
-  background-color: $theme-accent;
-  transform: scale(.9);
-  transform-origin: center;
-  }
+    @include screen-sm {
+    background-color: $theme-accent;
+    transform: scale(.9);
+    transform-origin: center;
+    }
 }
-
