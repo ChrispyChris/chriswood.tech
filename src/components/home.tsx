@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import "../sass/home.scss";
 
-function Home(): ReactElement {
+export default function Home(): ReactElement {
 
     return(
       <div className="home__grid">
@@ -24,5 +24,3 @@ function Home(): ReactElement {
       </div>
     );
 }
-
-export default Home

@@ -1,7 +1,8 @@
 import React, { ReactElement, useEffect, useState } from "react";
 import { marked } from "marked";
+import "../sass/blog_post.scss";
 
-function BlogPost(): ReactElement {
+export default function BlogPost(): ReactElement {
     const [blogPost, setBlogPost] = useState<string>("");
 
     useEffect(() => {
@@ -19,5 +20,3 @@ function BlogPost(): ReactElement {
         <div className="blog__post" dangerouslySetInnerHTML={{__html: blogPost}}></div>
     );
 };
-
-export default BlogPost;

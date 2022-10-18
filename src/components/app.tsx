@@ -13,7 +13,7 @@ import Header from "./header";
 import Home from "./home";
 import Projects from "./projects";
 
-function App(): ReactElement {
+export default function App(): ReactElement {
     return (
       <BrowserRouter>
         <Header />
@@ -28,4 +28,3 @@ function App(): ReactElement {
     );
 }
 
-export default App;

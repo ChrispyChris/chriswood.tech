@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { navItems } from "./nav";
 import "../sass/mobile_nav.scss";
 
-function MobileNav(): ReactElement {
+export default function MobileNav(): ReactElement {
     const [isOpen, setIsOpen] = useState(false);
 
     function toggleMenu(): void {
@@ -25,5 +25,3 @@ function MobileNav(): ReactElement {
       </nav>
     );
 }
-
-export default MobileNav;

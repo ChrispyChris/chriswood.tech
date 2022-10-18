@@ -6,7 +6,7 @@ type HamburgerProps = {
     click: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-function HamburgerMenu(props: HamburgerProps): JSX.Element {
+export default function HamburgerMenu(props: HamburgerProps): JSX.Element {
     return(
       <div className={`hamburger__button-wrapper--${props.open ? "open" : "closed"}`}>
         <button onClick={props.click} className="hamburger__button">
@@ -18,5 +18,3 @@ function HamburgerMenu(props: HamburgerProps): JSX.Element {
       </div>
     );
 }
-
-export default HamburgerMenu;

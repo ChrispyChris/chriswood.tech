@@ -14,7 +14,7 @@ export const navItems: NavLink[] = [
     { name: "Contact", url: "/contact" },
 ];
 
-function Nav(): ReactElement {
+export default function Nav(): ReactElement {
     return(
       <nav className="nav-container">
         <ul className="nav__list">
@@ -23,5 +23,3 @@ function Nav(): ReactElement {
       </nav>
     );
 };
-
-export default Nav;

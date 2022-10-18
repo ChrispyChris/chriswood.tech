@@ -3,7 +3,7 @@ import MobileNav from "./mobile_nav";
 import Nav from "./nav";
 import useMobileComponent from "../hooks/useMobileComponent.js";
 
-function Header(): ReactElement {
+export default function Header(): ReactElement {
 
     const isMobile: boolean = useMobileComponent(575);
     return(
@@ -12,5 +12,3 @@ function Header(): ReactElement {
       </>
     );
 }
-
-export default Header;

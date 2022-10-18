@@ -2,18 +2,15 @@ import React, { ReactElement } from "react";
 import BlogPost from "./blog_post";
 import "../sass/blog.scss";
 
-function Blog(): ReactElement {
+export default function Blog(): ReactElement {
     return (
-      <div className="blog__grid">
-        <div className="blog__title-wrapper">
-          <h1 className="blog__title"><span className="blog__title-spacer">Chris</span><br />Blog Posts</h1>
+        <div className="blog__grid">
+            <div className="blog__title-wrapper">
+            <h1 className="blog__title">Blog Posts</h1>
         </div>
 
         <div className="blog__blog-wrapper">
             <BlogPost />       
-        </div>
-
-        <div className="blog__post-wrapper">
         </div>
 
           <div className="blog__pgp-wrapper">
@@ -56,5 +53,3 @@ function Blog(): ReactElement {
       </div>
     );
 }
-
-export default Blog;
