@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import BlogPost from "./blog_post";
+import BlogPostsListContainer from "./blog_post_aggregator";
 import "../sass/blog.scss";
 
 export default function Blog(): ReactElement {
@@ -10,7 +10,7 @@ export default function Blog(): ReactElement {
         </div>
 
         <div className="blog__blog-wrapper">
-            <BlogPost />       
+            <BlogPostsListContainer />       
         </div>
 
           <div className="blog__pgp-wrapper">

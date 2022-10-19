@@ -1,11 +1,9 @@
 @import "./globals";
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Roboto+Serif:ital,wght@0,100;0,900;1,100&display=swap');
 
+$font-x-sm: clamp(0.390625rem, -0.078125rem + 2.50000vw, 0.578125rem);
 $font-sm: clamp(1.125rem, 0.625rem + 2.22222vw, 1.425rem);
 $font-weight-sm: 600;
-
-.blog__blog-wrapper {
-}  
 
 .blog__grid {
     color: $theme-body-text;
@@ -19,18 +17,17 @@ $font-weight-sm: 600;
 .blog__pgp-title {
     text-align: center;
     margin-bottom: .5em;
-    width: 100%;
 }
 
 .blog__pgp-wrapper {
     align-self: center;
     text-align: start;
     margin: 1em 0 1em;
-    max-width: 321px;
 }
 
 .blog__pgp-key {
-    font-size: .65rem;
+    font-size: $font-x-sm;
+    max-width: 321px;
 }
 
 .blog__post {
