@@ -1,39 +1,49 @@
 import React, { ReactElement, useEffect, useState } from "react";
+import BlogPost from "./blog_post";
 import "../sass/blog_post_aggregator.scss";
 
 export default function BlogPostsListContainer(): ReactElement {
-    const [blogPostTitles, setBlogPostTitles] = useState<string[]>(["Loading... Please wait :)."]);
+    const [blogPostTitles, setBlogPostTitles] = useState<string[]>([""]);
     const [blogPostsArray, setBlogPostsArray] = useState<JSX.Element[]>([]);
 
     useEffect(() => {
         async function loadBlogPostTitles() {
+            if ( blogPostTitles.length === 1 )
             try {
                 const blogPostTitlesFile: Response = await fetch("../blog_posts/blog_files.json");
                 if (!blogPostTitlesFile.ok) 
                     throw "Sorry, there was a problem loading the blog posts.";
                 const blogPostTitlesJsonArr = await blogPostTitlesFile.json();
                 setBlogPostTitles(blogPostTitlesJsonArr);
-            } 
-            catch(error: unknown) {
-                if (typeof error === "string") setBlogPostTitles([error]);
-                else setBlogPostTitles(["Something really bad happened!"]);
+            }
+            catch (error) {
+                if (Array.isArray(error))
+                    setBlogPostTitles(error);
             }
         }
 
+        function createBlogPostsArray(blogPostTitlesList: string[]): ReactElement[] {
+            return blogPostTitlesList.map((blogPost, index) => 
+                <BlogPost blogPostTitle={blogPost} key={index}/>
+            );
+        }
+
         loadBlogPostTitles();
-        setBlogPostsArray(createBlogPostsArray(blogPostTitles));
+        const blogArray = createBlogPostsArray(blogPostTitles);
+        setBlogPostsArray(blogArray);
     }, [blogPostTitles]);
 
-    function createBlogPostsArray(blogPostsArray: string[]): JSX.Element[] {
-        return blogPostsArray.map((blogPost, index) => 
-            <div key={index}>{blogPost}</div>
-        );
-    }
-
     function displayBlogPosts(blogPostsArray: JSX.Element[]) {
-        return (
-            <div>{blogPostsArray}</div>
-        );
+        if (blogPostsArray.length === 1) {
+            return (
+                <div>Loading...</div>
+            );
+        }
+        else {
+            return (
+                <div>{blogPostsArray}</div>
+            );
+        }
     }
 
     return (
