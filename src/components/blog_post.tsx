@@ -14,10 +14,11 @@ export default function BlogPost({ blogPostTitle }: BlogPostProps): ReactElement
         async function fetchBlogPost() {
             if (blogPost.length === 0) {
                 try {
-                    const blogPostFetch = await fetch(`../blog_posts/${blogPostTitle}`);
-                    let blogPostText = await blogPostFetch.text();
-                    blogPostText = marked.parse(blogPostText);
-                    setBlogPost(blogPostText);
+                    const response = await fetch(`../blog_posts/${blogPostTitle}`);
+                    if (!response.ok) return;
+                    const blogPostText = await response.text();
+                    
+                    setBlogPost(marked.parse(blogPostText));
                 }
                 catch (error) {
                     if (typeof error === "string")
