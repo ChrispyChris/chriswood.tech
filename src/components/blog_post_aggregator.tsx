@@ -4,7 +4,8 @@ import "../sass/blog_post_aggregator.scss";
 
 export default function BlogPostsListContainer(): ReactElement {
     const [blogPostTitles, setBlogPostTitles] = useState<string[]>([]);
-    const [blogPostsArray, setBlogPostsArray] = useState<JSX.Element[]>([]);
+    //const [blogPostsArray, setBlogPostsArray] = useState<JSX.Element[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
         async function loadBlogPostTitles() {
@@ -14,6 +15,7 @@ export default function BlogPostsListContainer(): ReactElement {
                     throw "Sorry, there was a problem loading the blog posts.";
                 const blogPostTitlesJsonArr = await blogPostTitlesFile.json();
                 setBlogPostTitles(blogPostTitlesJsonArr);
+                setIsLoading(false);
             }
             catch (error) {
                 if (Array.isArray(error)) {
@@ -25,7 +27,7 @@ export default function BlogPostsListContainer(): ReactElement {
         loadBlogPostTitles();
     }, []);
 
-    useEffect(() => {
+    /**useEffect(() => {
         function createBlogPosts() {
             let blogArray = [];
             blogArray = blogPostTitles.map((blogPost, index) => <BlogPost blogPostTitle={blogPost} key={index} />);
@@ -33,11 +35,11 @@ export default function BlogPostsListContainer(): ReactElement {
         }
 
         createBlogPosts();
-    }, [blogPostTitles]);
+    }, [blogPostTitles]);*/
 
     return (
         <div className="blog__post-wrapper"> 
-            {blogPostsArray.length === 0  ?
+            {isLoading   ?
             "Loading..." :
             blogPostTitles.map((blogPost: string, index: number) => <BlogPost blogPostTitle={blogPost} key={index} />)}
         </div>
