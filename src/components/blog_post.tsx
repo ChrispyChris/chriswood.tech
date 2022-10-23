@@ -27,8 +27,8 @@ export default function BlogPost({ blogPostTitle }: BlogPostProps): ReactElement
             }
         }
 
-        fetchBlogPost(blogPost);
-        }, []);
+        fetchBlogPost(blogPostTitle);
+    }, []);
 
     const handleClick = () => {
        
@@ -42,7 +42,7 @@ export default function BlogPost({ blogPostTitle }: BlogPostProps): ReactElement
         }
         else {
             return (
-                <div>Loading.</div>
+                <div className="blog__post">Loading blog post.</div>
             );
         }
     }

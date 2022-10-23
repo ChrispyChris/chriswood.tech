@@ -8,7 +8,6 @@ export default function BlogPostsListContainer(): ReactElement {
 
     useEffect(() => {
         async function loadBlogPostTitles() {
-            if ( blogPostTitles.length === 1 )
             try {
                 const blogPostTitlesFile: Response = await fetch("../blog_posts/blog_files.json");
                 if (!blogPostTitlesFile.ok) 
@@ -22,31 +21,33 @@ export default function BlogPostsListContainer(): ReactElement {
             }
         }
 
-        function createBlogPostsArray(blogPostTitlesList: string[]): ReactElement[] {
-            return blogPostTitlesList.map((blogPost, index) => 
-                <BlogPost blogPostTitle={blogPost} key={index}/>
-            );
-        }
-
         loadBlogPostTitles();
-        const blogArray = createBlogPostsArray(blogPostTitles);
-        setBlogPostsArray(blogArray);
-    }, [blogPostTitles]);
+    }, []);
 
-    function displayBlogPosts(blogPostsArray: JSX.Element[]) {
-        if (blogPostsArray.length === 1) {
-            return (
-                <div>Loading...</div>
-            );
-        }
-        else {
-            return (
-                <div>{blogPostsArray}</div>
-            );
-        }
+    /**
+    * function displayBlogPosts(blogPostsArray: JSX.Element[]) {
+    *     return (
+    *         <div>{blogPostsArray}</div>
+    *     );
+    * }
+    */
+
+    /**
+     * Still unsure what I'm trying to do when it comes to the React way.
+     * First render Loading since the length of blogPostsArray is initialized
+     * to an empty array.
+     */
+
+    if ( blogPostsArray.length === 1 ) {
+        return (
+            <div>Loading posts.</div>
+        );
     }
-
-    return (
-        displayBlogPosts(blogPostsArray)
-    );
+    else {
+        return (
+        <div className="blog__post-wrapper">
+            {blogPostTitles.map((blogPost, index) => <BlogPost blogPostTitle={blogPost} key={index} />)}
+        </div>
+        );
+    }
 }
