@@ -3,7 +3,7 @@ import BlogPost from "./blog_post";
 import "../sass/blog_post_aggregator.scss";
 
 export default function BlogPostsListContainer(): ReactElement {
-    const [blogPostTitles, setBlogPostTitles] = useState<string[]>([""]);
+    const [blogPostTitles, setBlogPostTitles] = useState<string[]>([]);
     const [blogPostsArray, setBlogPostsArray] = useState<JSX.Element[]>([]);
 
     useEffect(() => {
@@ -16,38 +16,30 @@ export default function BlogPostsListContainer(): ReactElement {
                 setBlogPostTitles(blogPostTitlesJsonArr);
             }
             catch (error) {
-                if (Array.isArray(error))
+                if (Array.isArray(error)) {
                     setBlogPostTitles(error);
+                }
             }
         }
 
         loadBlogPostTitles();
     }, []);
 
-    /**
-    * function displayBlogPosts(blogPostsArray: JSX.Element[]) {
-    *     return (
-    *         <div>{blogPostsArray}</div>
-    *     );
-    * }
-    */
+    useEffect(() => {
+        function createBlogPosts() {
+            let blogArray = [];
+            blogArray = blogPostTitles.map((blogPost, index) => <BlogPost blogPostTitle={blogPost} key={index} />);
+            setBlogPostsArray(blogArray);
+        }
 
-    /**
-     * Still unsure what I'm trying to do when it comes to the React way.
-     * First render Loading since the length of blogPostsArray is initialized
-     * to an empty array.
-     */
+        createBlogPosts();
+    }, [blogPostTitles]);
 
-    if ( blogPostsArray.length === 1 ) {
-        return (
-            <div>Loading posts.</div>
-        );
-    }
-    else {
-        return (
-        <div className="blog__post-wrapper">
-            {blogPostTitles.map((blogPost, index) => <BlogPost blogPostTitle={blogPost} key={index} />)}
+    return (
+        <div className="blog__post-wrapper"> 
+            {blogPostsArray.length === 0  ?
+            "Loading..." :
+            blogPostTitles.map((blogPost: string, index: number) => <BlogPost blogPostTitle={blogPost} key={index} />)}
         </div>
-        );
-    }
+    );
 }

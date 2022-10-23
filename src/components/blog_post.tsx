@@ -11,8 +11,8 @@ export default function BlogPost({ blogPostTitle }: BlogPostProps): ReactElement
     const [blogPost, setBlogPost] = useState<string>("");
 
     useEffect(() => {
-        const fetchBlogPost = async (blogPost: string) => {
-            if (blogPost === "") {
+        async function fetchBlogPost() {
+            if (blogPost.length === 0) {
                 try {
                     const blogPostFetch = await fetch(`../blog_posts/${blogPostTitle}`);
                     let blogPostText = await blogPostFetch.text();
@@ -27,27 +27,12 @@ export default function BlogPost({ blogPostTitle }: BlogPostProps): ReactElement
             }
         }
 
-        fetchBlogPost(blogPostTitle);
+        fetchBlogPost();
     }, []);
 
-    const handleClick = () => {
-       
-    }
-
-    function displayPost() {
-        if (blogPost.length > 0) {
-            return (
-                <div onClick={handleClick} className="blog__post" dangerouslySetInnerHTML={{__html: blogPost}} />
-            );
-        }
-        else {
-            return (
-                <div className="blog__post">Loading blog post.</div>
-            );
-        }
-    }
-
-    return ( displayPost() );
+    return (
+        <div className="blog__post" dangerouslySetInnerHTML={blogPost.length ? {__html: blogPost} : undefined} />
+    );
 }
 
 const walkTokens = (token: any) => {
