@@ -8,8 +8,8 @@ import {
 
 import Blog from "./blog";
 import Contact from "./contact";
-import Footer from "./footer";
-import Header from "./header";
+import Footer from "../components/footer";
+import Header from "../components/header";
 import Home from "./home";
 import Projects from "./projects";
 

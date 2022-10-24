@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import BlogPostsListContainer from "./blog_post_aggregator";
+import BlogPostsListContainer from "../components/blog_post_aggregator";
 import "../sass/blog.scss";
 
 export default function Blog(): ReactElement {
