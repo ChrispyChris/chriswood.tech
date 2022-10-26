@@ -15,7 +15,7 @@ export default function Home(): ReactElement {
         </div> 
       
         <div className="home__work-wrapper">
-          <p className="home__work">Want to hire me or want to collaborate on something? Shoot me an email and let's see if I can help!</p>
+          <p className="home__work">Want to hire me or would you like to collaborate on something? Shoot me an email and let's see if I can help!</p>
         </div>
 
         <div className="home__projects-wrapper">
