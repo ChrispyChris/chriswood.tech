@@ -111,6 +111,10 @@
         transition: all 0.4s cubic-bezier(0.84, 0.06, 0.24, 1);
       }
     }
+
+    @include screen-sm {
+        display: none;
+    }
 }
 
 /***************************************

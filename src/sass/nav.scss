@@ -36,15 +36,19 @@ $font-sm: clamp(2rem, 0.7143rem + 3.5714vw, 4rem);
     border: none;
     color: $theme-light;
     text-shadow: 
-     -1px -1px 0 $theme-accent,  
-     1px -1px 0 $theme-accent,
-     -1px 1px 0 $theme-accent,
-     1px 1px 0 $theme-accent,
-     3px 0px 2px $theme-accent;
+        -1px -1px 0 $theme-accent,  
+        1px -1px 0 $theme-accent,
+        -1px 1px 0 $theme-accent,
+        1px 1px 0 $theme-accent,
+        3px 0px 2px $theme-accent;
 }
 
 .nav__list {
     display: flex;
     justify-content: space-evenly;
     margin: 1rem;
+
+    @include hide-screen-sm {
+        display: none;
+    }
 }

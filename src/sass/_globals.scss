@@ -36,8 +36,8 @@ $theme-light: #FFFFFF;
     @media (min-width: 576px) { @content; }
 }
 
-@mixin mq($screen-width) {
-    @media (min-width: #{$screen-width}px) { @content; }
+@mixin hide-screen-sm {
+    @media (max-width: 575px) { @content; }
 }
 
 /***********************
