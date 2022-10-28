@@ -24,7 +24,7 @@
 
 .mobile-nav-hamburger--open {
     align-items: center;
-    background-color: $theme-light;
+    background-color: $theme-body-background;
     display: inline-flex;
     flex-direction: column;
     height: 100vh;
@@ -69,7 +69,7 @@
 .mobile-nav-hamburger--closed {
     align-items: center;
     animation: fade-out 500ms forwards;
-    background-color: $theme-light;
+    background-color: $theme-body-background;
     display: inline-flex;
     flex-direction: column;
     height: 100vh;
