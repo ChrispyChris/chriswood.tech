@@ -85,7 +85,7 @@
     .hamburger__slice {
       background-color: $theme-accent;
       border-radius: 3px;
-      box-shadow: 1.5px 1px 1px;
+      box-shadow: 1.5px 1px 1px $theme-accent-shadow;
       height: 4px;
       left: 10%;
       position: absolute;

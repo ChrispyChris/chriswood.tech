@@ -1,26 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+/***********************
+*                      *
+*   Temporary Fonts    *
+*                      *
+***********************/
 
-@font-face {
-    font-family: "HelveticaNeueLTW05-57Cond";
-    src: local("HelveticaNeueLTW05-57Cond"),
-        url("../assets/fonts/Helvetica-Neue/HelveticaNeueLTW05-57Cond.woff2") format("woff2"),
-        url("../assets/fonts/Helvetica-Neue/HelveticaNeueLTW05-57Cond.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
-@font-face {
-    font-family: "Bowlby One SC', cursive";
-    src: url("../assets/fonts/BowlbyOneSC-Regular.ttf");
-    font-display: swap;
-}
+/***********************
+*                      *
+*   Font-Face Setup    *
+*                      *
+***********************/
 
-$theme-heading: #669bbc;
-$theme-accent: #f3a712;
+/***********************
+*                      *
+*   Global Variables   *
+*                      *
+***********************/
+
+$font-sm: clamp(1.125rem, 0.625rem + 2.22222vw, 1.425rem);
+$font-med: clamp(1.25rem, 0.625rem + 2.22222vw, 2.425rem);
+$font-weight-sm: 600;
+$font-heading-sm: clamp(2.5rem, 0.20569620253165rem + 12.65823vw, 4.375rem);
+
+// Fonts
+$theme-accent: #9AD2CB;
+$theme-accent-shadow: #AF1385;
+$theme-body-background: #F3F4F6;
+$theme-body-text: black;
+$theme-heading: #525B76;
 $theme-light: #FFFFFF;
-$theme-body-text: #29335c;
 
 @mixin screen-sm {
     @media (min-width: 576px) { @content; }
@@ -28,4 +38,14 @@ $theme-body-text: #29335c;
 
 @mixin mq($screen-width) {
     @media (min-width: #{$screen-width}px) { @content; }
+}
+
+/***********************
+*                      *
+*    Global Styles     *
+*                      *
+***********************/
+
+body {
+    background-color: $theme-body-background;
 }

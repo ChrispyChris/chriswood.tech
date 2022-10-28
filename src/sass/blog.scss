@@ -1,5 +1,4 @@
 @import "./globals";
-@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Roboto+Serif:ital,wght@0,100;0,900;1,100&display=swap');
 
 $font-x-sm: clamp(0.390625rem, -0.078125rem + 2.50000vw, 0.578125rem);
 $font-sm: clamp(1.125rem, 0.625rem + 2.22222vw, 1.425rem);
@@ -42,10 +41,7 @@ $font-weight-sm: 600;
 
 .blog__title {
     color: $theme-heading;
-    font-family: "Roboto Serif, serif";
     font-size: 3.30rem;
-    font-style: italic;
-    font-weight: 100;
     margin-top: 1em;
     text-shadow: 1.5px 1px 1px black;
 }
