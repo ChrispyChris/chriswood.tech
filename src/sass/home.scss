@@ -15,14 +15,10 @@
 
 .home__about {
     line-height: 2;
+    margin-bottom: auto;
 
     @include screen-sm {
     }
-}
-
-.home__about-wrapper {
-    margin: 2em 0em 2em;
-    width: 100%;
 }
 
 .home__projects {
@@ -46,23 +42,30 @@
     color: $theme-heading;
     font-family: "Poppins";
     font-weight: 800;
-    font-size: $font-heading-sm;
-    margin: auto;
+    font-size: clamp(3.5rem, -0.06140350877193rem + 19.64912vw, 7.0rem);
+    margin-top: auto;
+
     @include screen-sm {
       font-size: 4rem;
     }
 }
 
-.home__title-wrapper {
+.home__initial-page-wrapper{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
 }
 
-.home__title--su {
-    color: $theme-accent;
-    text-shadow: 2px 2px 2px $theme-accent-shadow;
+.home__my-name {
+    font-size: $font-heading-sm;
+}
+
+.home__whatido {
+    color: $theme-heading;
+    font-family: "Poppins";
+    font-size: $font-heading-sm;
+    font-weight: 800;
 }
 
 .home__work {

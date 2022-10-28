@@ -6,13 +6,13 @@ export default function Home(): ReactElement {
 
     return(
       <div className="home__grid">
-        <div className="home__title-wrapper">
-          <h1 className="home__title"><span className="home__title--su">~$ </span>whoami<br />Chris Wood</h1>
+        <div className="home__initial-page-wrapper">
+          <h1 className="home__title">whoami</h1>
+          <p className="home__my-name">Chris Wood</p>
+          <h2 className="home__whatido">whatido</h2>
+          <p className="home__about">Full stack web developer. Systems administration. Webhosting/Server setup</p>
         </div>
 
-        <div className="home__about-wrapper">
-          <p className="home__about">Web developer. Programmer. Tech lover. <span className="home__about-highlight">Nerd.</span></p>
-        </div> 
       
         <div className="home__work-wrapper">
           <p className="home__work">Want to hire me or would you like to collaborate on something? Shoot me an email and let's see if I can help!</p>
