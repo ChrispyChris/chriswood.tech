@@ -12,29 +12,53 @@
 *                                      *
 ***************************************/
 
-.nav__item {
+.nav-container {
     align-self: center;
-    display: inline-block;
-    text-align: center;
-    width: fit-content;
-}
+    border: solid 2px #E7E7E8;
+    border-radius: 5px 5px 5px 5px;
+    height: 3rem;
+    margin-top: 0.5em;
+    width: 70%;
 
-.nav__link {
-    color: $theme-accent-green;
-    font-family: "Work Sans", sans-serif;
-    font-size: 2.5rem;
-    font-weight: 800;
-    padding: 0; 
-    position: relative;
-    text-align: center;
-    text-shadow: 3px 0px 2px rgba(0, 0, 0, 1);
-
-    @include screen-med {
+    @include hide-screen-sm {
+        display: none;
     }
 }
 
-.nav__link:hover, .nav__link:focus {
-    border: none;
+.nav__item {
+    align-items: center;
+    background-color: #F3F4F6;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: fit-content;
+    transition: background-color .25s ease-out;
+}
+
+.nav__item:hover {
+    background-color: #E3E4E6;
+
+}
+
+.nav__link {
+    align-items: center;
+    color: $theme-accent-green;
+    display: flex;
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    height: 100%;
+    padding: 0 1em;
+    position: relative;
+    text-align: center;
+    @include screen-med {
+    }
+
+    transition: all 0.25s ease-out;
+}
+
+.nav__link:hover {
     color: $theme-light;
     text-shadow: 
         -1px -1px 0 $theme-accent-green,  
@@ -46,8 +70,7 @@
 
 .nav__list {
     display: flex;
-    justify-content: space-evenly;
-    margin: 1rem;
+    height: 100%;
 
     @include hide-screen-sm {
         display: none;
