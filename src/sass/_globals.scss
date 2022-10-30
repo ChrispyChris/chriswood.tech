@@ -6,6 +6,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter:wght@300;400;600&family=Crimson+Text:wght@400;600&family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&display=swap');
 
 /***********************
 *                      *
@@ -13,20 +15,36 @@
 *                      *
 ***********************/
 
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../assets/fonts/Merriweather-Italic.woff2') format('woff2'),
+        url('../assets/fonts/Merriweather-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
 /***********************
 *                      *
 *   Global Variables   *
 *                      *
 ***********************/
 
+// Font sizes
 $font-sm: clamp(1.125rem, 0.625rem + 2.22222vw, 1.425rem);
 $font-med: clamp(1.25rem, 0.625rem + 2.22222vw, 2.425rem);
+
+// Home page fonts
+$font-home-text-sm: clamp(1.25rem, -0.27631578947368rem + 8.42105vw, 2.75rem);
+$font-home-title-sm: clamp(3.5rem, -0.06140350877193rem + 19.64912vw, 7.0rem);
+
+// Font weights
 $font-weight-sm: 600;
-$font-heading-sm: clamp(2.5rem, 0.20569620253165rem + 12.65823vw, 4.375rem);
 
 // Fonts
-$theme-accent: #9AD2CB;
-$theme-accent-shadow: #AF1385;
+$theme-accent-green: #00C48A;
+$theme-accent-purple : #AF1385;
 $theme-body-background: #F3F4F6;
 $theme-body-text: black;
 $theme-heading: #525B76;

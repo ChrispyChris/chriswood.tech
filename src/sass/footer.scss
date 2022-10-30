@@ -1,14 +1,13 @@
 @import "../sass/globals";
 
 .footer {
-    color: $theme-accent;
     display: flex;
+    color: $theme-accent-purple;
+    font-family: "Poppins", sans-serif;
     justify-content: flex-end;
-    font-family: "HelveticaNeueLTW05-57Cond", normal;
-    font-weight: 600;
     margin: 0 1em;
 }
 
 .footer__copyright {
-    color: #29335C;
+    color: $theme-accent-green;
 }

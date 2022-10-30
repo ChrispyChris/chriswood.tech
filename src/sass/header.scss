@@ -43,7 +43,7 @@
 
 .nav__link::after {
     @include screen-sm {
-    background-color: $theme-accent;
+    background-color: $theme-accent-green;
     border-radius: 10%;
     content: "";
     height: 100%;
@@ -59,7 +59,7 @@
 
 .nav__link:hover::after {
     @include screen-sm {
-    background-color: $theme-accent;
+    background-color: $theme-accent-green;
     transform: scale(.9);
     transform-origin: center;
     }
