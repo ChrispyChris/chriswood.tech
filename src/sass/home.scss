@@ -13,7 +13,7 @@
     font-size: $font-home-text-sm;
     line-height: 2;
     margin-bottom: auto;
-    @include screen-sm {
+    @include screen-med {
     }
 }
 
@@ -24,7 +24,7 @@
     font-size: $font-home-title-sm;
     margin-top: auto;
 
-    @include screen-sm {
+    @include screen-med {
       font-size: 4rem;
     }
 }
@@ -44,7 +44,7 @@
     font-size: $font-sm;
     line-height: 1.75;
 
-    @include screen-sm {
+    @include screen-med {
     }
 }
 
@@ -93,7 +93,7 @@
     line-height: 1.75;
     margin-bottom: 5em;
 
-    @include screen-sm {
+    @include screen-med {
     }
 }
 

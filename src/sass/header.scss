@@ -17,17 +17,17 @@
 ***************************************/
 
 .nav__container {
-    @include screen-sm {
+    @include screen-med {
     }
 }
 
 .nav__item {
-    @include screen-sm {
+    @include screen-med {
     }
 }
 
 .nav__link {
-    @include screen-sm {
+    @include screen-med {
     font-size: 1.75rem;
     height: 100px;
     padding: .25em;
@@ -35,14 +35,14 @@
 }
 
 .nav__link:hover {
-    @include screen-sm {
+    @include screen-med {
     color: $theme-light;
     padding-bottom: 0.35em;
     }
 }
 
 .nav__link::after {
-    @include screen-sm {
+    @include screen-med {
     background-color: $theme-accent-green;
     border-radius: 10%;
     content: "";
@@ -58,7 +58,7 @@
 }
 
 .nav__link:hover::after {
-    @include screen-sm {
+    @include screen-med {
     background-color: $theme-accent-green;
     transform: scale(.9);
     transform-origin: center;

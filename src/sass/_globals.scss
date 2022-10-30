@@ -50,7 +50,7 @@ $theme-body-text: black;
 $theme-heading: #525B76;
 $theme-light: #FFFFFF;
 
-@mixin screen-sm {
+@mixin screen-med {
     @media (min-width: 576px) { @content; }
 }
 

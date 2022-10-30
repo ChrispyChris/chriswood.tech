@@ -1,7 +1,5 @@
 @import "./globals";
 
-$font-sm: clamp(2rem, 0.7143rem + 3.5714vw, 4rem);
-
 /***************************************
 *                                      *
 *           Utility Classes            *
@@ -30,6 +28,9 @@ $font-sm: clamp(2rem, 0.7143rem + 3.5714vw, 4rem);
     position: relative;
     text-align: center;
     text-shadow: 3px 0px 2px rgba(0, 0, 0, 1);
+
+    @include screen-med {
+    }
 }
 
 .nav__link:hover, .nav__link:focus {
