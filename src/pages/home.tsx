@@ -8,7 +8,7 @@ export default function Home(): ReactElement {
     <div className="home__grid">
         <div className="home__initial-page-wrapper">
             <h1 className="home__title">whoami</h1>
-            <p className="home__my-name">Chris Wood</p>
+            <p className="home__my-name">Hi, I'm <span className="home__my-name--colored">Chris Wood</span>, a self-taught developer with a passion for Linux systems and server administration.</p>
             <h2 className="home__whatido">whatido</h2>
             <p className="home__about">Full stack web developer.<br />Systems administration.<br />Webhosting/Server setup.</p>
         </div>
@@ -17,7 +17,7 @@ export default function Home(): ReactElement {
             <div className="home__separator" />
 
             <div className="home__work-wrapper">
-                <p className="home__work">Would you like to hire me or collaborate on something?<br /><br />Shoot me an email and let's see if I can help!</p>
+                <p className="home__work">Would you like to hire me?<br /><br />Are you interested in collaborating on something?<br /><br />Shoot me an email and let's see if I can help!</p>
             </div>
 
             <div className="home__separator home__separator--right" />

@@ -6,10 +6,6 @@
 *                                      *
 ***************************************/
 
-.hide {
-    overflow: hidden !important;
-}
-
 .hamburger-transition {
     animation: fade-in 500ms forwards;
     right: 0vh !important;
@@ -21,16 +17,15 @@
 *                                      *
 ***************************************/
 
-
 .mobile-nav-hamburger--open {
     align-items: center;
     background-color: $theme-body-background;
     display: inline-flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     overflow: scroll;
     position: fixed;
-    right: -100vh;
+    right: -100%;
     transition: right 300ms cubic-bezier(1, 0, 0, 1);
     width: 100%;
 
@@ -71,9 +66,9 @@
     background-color: $theme-body-background;
     display: inline-flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     position: fixed;
-    right: -100vh;
+    right: -100%;
     transition: right 300ms cubic-bezier(1, 0, 0, 1);
     width: 100%;
 
@@ -95,5 +90,9 @@
       position: relative;
       text-align: center;
       text-shadow: 3px 0px 2px rgba(0, 0, 0, 1);
+    }
+
+    @include screen-med {
+        display: none;
     }
 }

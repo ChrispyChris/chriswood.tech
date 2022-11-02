@@ -8,6 +8,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter:wght@300;400;600&family=Crimson+Text:wght@400;600&family=Dosis&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 
 /***********************
 *                      *
@@ -24,7 +26,6 @@
     font-display: swap;
 }
 
-
 /***********************
 *                      *
 *   Global Variables   *
@@ -36,7 +37,7 @@ $font-sm: clamp(1.125rem, 0.625rem + 2.22222vw, 1.425rem);
 $font-med: clamp(1.25rem, 0.625rem + 2.22222vw, 2.425rem);
 
 // Home page fonts
-$font-home-text-sm: clamp(1.25rem, -0.27631578947368rem + 8.42105vw, 2.75rem);
+$font-home-text-sm: clamp(1.0rem, -0.017543859649123rem + 5.61404vw, 2.0rem);
 $font-home-title-sm: clamp(3.5rem, -0.06140350877193rem + 19.64912vw, 7.0rem);
 
 // Font weights
@@ -54,7 +55,15 @@ $theme-light: #FFFFFF;
     @media (min-width: 576px) { @content; }
 }
 
-@mixin hide-screen-sm {
+@mixin screen-desktop {
+    @media (min-width: 1024px) { @content; }
+}
+
+@mixin screen-biggest {
+    @media (min-width: 1300px) { @content; }
+}
+
+@mixin hide-below-med {
     @media (max-width: 575px) { @content; }
 }
 

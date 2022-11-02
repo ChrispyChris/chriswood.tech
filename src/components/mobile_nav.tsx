@@ -12,7 +12,7 @@ export default function MobileNav(): ReactElement {
     };
 
     return(
-      <nav className="mobile-nav-container">
+      <nav className="mobile-nav__container">
         <ul id="mobile-nav_hamburger" className={`mobile-nav-hamburger--${isOpen ? "open" : "closed"} ${isOpen ? "hamburger-transition" : null}`}>
           {navItems.map(item => <li className="mobile-nav__item" key={item.name} onClick={toggleMenu}><Link to={item.url} className="mobile-nav__link">{item.name}</Link></li>)}
         </ul>

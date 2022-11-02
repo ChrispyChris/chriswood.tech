@@ -4,28 +4,24 @@
     color: $theme-body-text;
     display: flex;
     flex-direction: column;
-    font-family: 'Merriweather', serif;
+    font-family: 'Source Code Pro', monospace;
     flex-grow: 1;
     margin: 0 1.5em 0;
 }
 
 .home__about {
     font-size: $font-home-text-sm;
-    line-height: 2;
+    line-height: 1.5;
     margin-bottom: auto;
+
     @include screen-med {
+        position: relative;
+        top: -2rem;
     }
-}
 
-.home__title {
-    color: $theme-heading;
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-size: $font-home-title-sm;
-    margin-top: auto;
-
-    @include screen-med {
-      font-size: 4rem;
+    @include screen-biggest {
+        position: unset;
+        top: unset;
     }
 }
 
@@ -34,10 +30,38 @@
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
+
+    @include screen-med {
+        align-items: center;
+    }
+
+    @include screen-biggest {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 }
 
 .home__my-name {
     font-size: $font-home-text-sm;
+    line-height: 1.5;
+    max-width: 480px;
+
+    @include screen-med {
+        margin-bottom: unset;
+        max-width: 520px;
+        position: relative;
+        top: -2rem;
+    }
+
+    @include screen-desktop {
+    }
+}
+
+.home__my-name--colored {
+    background: radial-gradient(circle, $theme-accent-purple 25%, $theme-accent-green 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .home__projects {
@@ -62,6 +86,7 @@
 .home__second-page-wrapper {
     display: flex;
     flex-direction: column;
+    font-family: 'Source Code Pro', monospace;
     min-height: 100vh;
     width: 100%;
 }
@@ -69,7 +94,6 @@
 .home__separator {
     background-color: black;
     height: 3px;
-    margin-bottom: 5em;
     position: relative;
     transform: translateX(-24px);
     width: 75%;
@@ -81,16 +105,46 @@
     transform: translateX(24px);
 }
 
+.home__title {
+    color: $theme-heading;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: $font-home-title-sm;
+    margin-top: auto;
+
+    @include screen-med {
+        font-size: 8rem;
+        margin-top: unset;
+    }
+
+}
+
 .home__whatido {
     color: $theme-heading;
     font-size: $font-home-title-sm;
     font-family: "Poppins", sans-serif;
     font-weight: 800;
+
+    @include screen-med {
+        font-size: 8rem;
+    }
+
+    @include screen-desktop {
+        display: flex;
+        justify-content: end;
+    }
+
+    @include screen-biggest {
+        display: unset;
+        justify-content: unset;
+        position: unset;
+    }
 }
 
 .home__work {
     font-size: $font-sm;
     line-height: 1.75;
+    margin-top: 5em;
     margin-bottom: 5em;
 
     @include screen-med {

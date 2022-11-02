@@ -1,15 +1,5 @@
 @import "./sass/globals";
 
-@font-face {
-    font-family: "HelveticaNeueLTW05-57Cond";
-    src: local("HelveticaNeue"),
-      url("assets/fonts/Helvetica-Neue/HelveticaNeueLTW05-57Cond.woff2") format("woff2"),
-      url("assets/fonts/Helvetica-Neue/HelveticaNeueLTW05-57Cond.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 body {
     background-color: $theme-light;
 }
@@ -17,6 +7,4 @@ body {
 #root {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    position: relative;
 }
