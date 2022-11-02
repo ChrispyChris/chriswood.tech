@@ -16,12 +16,14 @@
 
     @include screen-med {
         position: relative;
-        top: -2rem;
+        top: -4rem;
     }
 
     @include screen-biggest {
+        margin-bottom: unset;
         position: unset;
         top: unset;
+        
     }
 }
 
@@ -39,6 +41,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        position: unset;
+        top: unset;
     }
 }
 
@@ -55,6 +61,8 @@
     }
 
     @include screen-desktop {
+        position: unset;
+        top: unset;
     }
 }
 
@@ -66,9 +74,9 @@
 
 .home__projects {
     font-size: $font-sm;
-    line-height: 1.75;
+    line-height: 1.5;
 
-    @include screen-med {
+    @include screen-biggest {
     }
 }
 
@@ -127,15 +135,12 @@
 
     @include screen-med {
         font-size: 8rem;
-    }
-
-    @include screen-desktop {
-        display: flex;
-        justify-content: end;
+        position: relative;
+        top: -2rem;
     }
 
     @include screen-biggest {
-        display: unset;
+        display: initial;
         justify-content: unset;
         position: unset;
     }
@@ -143,12 +148,10 @@
 
 .home__work {
     font-size: $font-sm;
-    line-height: 1.75;
+    line-height: 1.5;
     margin-top: 5em;
     margin-bottom: 5em;
 
-    @include screen-med {
-    }
 }
 
 .home__work-wrapper {
