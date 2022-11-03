@@ -3,11 +3,19 @@ import { createHtmlPlugin } from "vite-plugin-html";
 import react from "@vitejs/plugin-react";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import pluginListBlogPosts from "../plugins/rollup-plugin-list-blog-posts";
+import autoprefixer from "autoprefixer";
 
 export default defineConfig({
     build: {
         emptyOutDir: true,
         outDir: "../build",
+    },
+    css: {
+        postcss: {
+            plugins: [
+                autoprefixer
+            ]
+        },
     },
     plugins: [
         createHtmlPlugin({
