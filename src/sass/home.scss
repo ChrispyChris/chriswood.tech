@@ -19,7 +19,7 @@
         top: -4rem;
     }
 
-    @include screen-biggest {
+    @include screen-fifteen {
         margin-bottom: unset;
         position: unset;
         top: unset;
@@ -37,7 +37,7 @@
         align-items: center;
     }
 
-    @include screen-biggest {
+    @include screen-fifteen {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -59,24 +59,19 @@
         position: relative;
         top: -2rem;
     }
-
-    @include screen-desktop {
-        position: unset;
-        top: unset;
-    }
 }
 
 .home__my-name--colored {
     background: radial-gradient(circle, $theme-accent-purple 25%, $theme-accent-green 100%);
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 .home__projects {
     font-size: $font-sm;
     line-height: 1.5;
 
-    @include screen-biggest {
+    @include screen-fifteen {
     }
 }
 
@@ -125,6 +120,10 @@
         margin-top: unset;
     }
 
+    @include screen-fifteen {
+        font-size: 12rem;
+    }
+
 }
 
 .home__whatido {
@@ -139,10 +138,14 @@
         top: -2rem;
     }
 
-    @include screen-biggest {
+    @include screen-fifteen {
         display: initial;
         justify-content: unset;
         position: unset;
+    }
+
+    @include screen-fifteen {
+        font-size: 12rem;
     }
 }
 

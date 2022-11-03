@@ -59,8 +59,12 @@ $theme-light: #FFFFFF;
     @media (min-width: 1024px) { @content; }
 }
 
-@mixin screen-biggest {
+@mixin screen-thirteen {
     @media (min-width: 1300px) { @content; }
+}
+
+@mixin screen-fifteen {
+    @media (min-width: 1500px) { @content; }
 }
 
 @mixin hide-below-med {
