@@ -3,7 +3,7 @@ import BlogPost from "./blog_post";
 import "../sass/blog_post_aggregator.scss";
 
 export default function BlogPostsListContainer(): ReactElement {
-    const [blogPostTitles, setBlogPostTitles] = useState<string[]>(null);
+    const [blogPostTitles, setBlogPostTitles] = useState<string[] | null>(null);
 
     useEffect(() => {
         async function loadBlogPostTitles() {
