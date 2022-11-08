@@ -23,6 +23,6 @@
     "declaration": true,
     "noEmit": false,
   },
-  "exclude": ["./build/", "./node_modules/*"],
+  "exclude": ["./build/", "./node_modules/*", "./plugins", "./server-build"],
   "include": ["./src/**/*"]
 }
