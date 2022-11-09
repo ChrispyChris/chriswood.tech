@@ -7,7 +7,7 @@ build({
     bundle: false,
     format: "esm",
     minify: true,
-    outfile: "server-build/server.js",
+    outfile: "server-build/server.mjs",
     platform: "node",
 }).catch(() => process.exit(1));
 

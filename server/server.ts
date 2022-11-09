@@ -4,7 +4,7 @@ import sqlite from "sqlite3";
 const server = express();
 
 // Load the database and check for errors.
-let db = new sqlite.Database("./blog_database.db", (error) => {
+let db = new sqlite.Database("./server-build/blog_database.db", (error) => {
     if (error) {
         console.log("There was an error opening the database.");
     }
@@ -12,12 +12,12 @@ let db = new sqlite.Database("./blog_database.db", (error) => {
     console.log("Connected to database.");
 });
 
-const port = 3001
+const port = 3001;
 
 server.get('/', (req, res) => {
-  res.send(new Date().toLocaleTimeString())
-})
+  res.send(new Date().toLocaleTimeString());
+});
 
 server.listen(port, () => {
-  console.log(`Example app listening at 127.0.0.1:${port}`)
-})
+  console.log(`Example app listening at 127.0.0.1:${port}`);
+});
