@@ -4,8 +4,9 @@
     color: $theme-body-text;
     display: flex;
     flex-direction: column;
-    font-family: 'Source Code Pro', monospace;
     flex-grow: 1;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
     margin: 0 1.5em 0;
 }
 
@@ -68,18 +69,11 @@
 }
 
 .home__projects {
-    font-size: $font-sm;
+    font-size: $font-home-text-sm;
     line-height: 1.5;
 
     @include screen-fifteen {
     }
-}
-
-.home__projects-link {
-    color: $theme-body-text;
-    text-decoration: underline;
-    text-underline-offset: 1.75px;
-    text-decoration-color: $theme-accent-green;
 }
 
 .home__projects-wrapper {
@@ -150,13 +144,32 @@
 }
 
 .home__work {
-    font-size: $font-sm;
+    font-size: $font-home-text-sm;
     line-height: 1.5;
-    margin-top: 5em;
-    margin-bottom: 5em;
-
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 .home__work-wrapper {
     width: 100%;
+}
+
+.projects__link {
+    position: relative;
+
+    &::after {
+        background-color: black;
+        bottom: 2.5px;
+        content: "";
+        height: 1.25px;
+        left: 5%;
+        position: absolute;
+        width: 80%;
+    }
+}
+
+.projects__link--first {
+    &::after {
+        left: 10%;
+    }
 }

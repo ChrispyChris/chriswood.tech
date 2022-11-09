@@ -30,33 +30,45 @@
     width: 100%;
 
     .mobile-nav__item {
-      align-self: center;
-      display: inline-block;
-      text-align: center;
-      width: fit-content;
+        align-self: center;
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        width: fit-content;
 
-      &:first-of-type { margin-top: 50px; }
+        &:first-of-type { margin-top: 50px; }
+
+        &::before {
+            bottom: 0;
+            background-color: black;
+            content: "";
+            height: 2px;
+            left: 0;
+            position: absolute;
+            transform: scaleX(0);
+            transform-origin: bottom left;
+            transition: transform 0.25s ease-out;
+            width: 100%;
+        }
+
+        &:hover::before {
+            transform: scaleX(.85);
+            transform-origin: bottom left;
+            transition: transform 0.25s ease-out;
+        }
     }
 
     .mobile-nav__link {
-      color: $theme-heading;
-      font-family: "Poppins", sans-serif;
-      font-size: 3rem;
-      font-weight: 800;
-      padding: 0; 
-      position: relative;
-      text-align: center;
-      text-shadow: 3px 0px 2px rgba(0, 0, 0, 1);
+        color: $theme-heading;
+        font-family: "Poppins", sans-serif;
+        font-size: 3rem;
+        font-weight: 800;
+        padding: 0; 
+        text-align: center;
+        text-shadow: 3px 0px 2px rgba(0, 0, 0, 1);
     }
 
     .mobile-nav__link:hover, .mobile-nav__link:focus {
-      border: none;
-      text-shadow: 
-       -1px -1px 0 $theme-accent-green,
-       1px -1px 0 $theme-accent-green,
-       -1px 1px 0 $theme-accent-green,
-       1px 1px 0 $theme-accent-green,
-       3px 0px 2px $theme-accent-green;
     }
 }
 
