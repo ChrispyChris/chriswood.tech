@@ -50,8 +50,8 @@
         "url": "mygithub:ChrispyChris/chriswoodtech.git"
     },
     "scripts": {
-        "build": "rm -rf ./build; vite build src; ./build.js",
-        "clean": "rm -rf ./build",
+        "build": "rm -rf ./public; vite build src; ./build.js",
+        "clean": "rm -rf ./public",
         "dev": "vite serve src",
         "preview": "vite preview",
         "test": "echo \"Error: no test specified.\""
