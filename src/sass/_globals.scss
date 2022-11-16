@@ -32,19 +32,20 @@
 *                      *
 ***********************/
 
-// Font sizes
+// Global font sizes
 $font-sm: clamp(1.125rem, 0.625rem + 2.22222vw, 1.425rem);
 $font-med: clamp(1.25rem, 0.625rem + 2.22222vw, 2.425rem);
 
-// Home page fonts
-$font-home-text-sm: 1rem;
-$font-home-text-med: 1.125rem;
-$font-home-title-sm: clamp(3.0rem, -0.76470588235294rem + 18.82353vw, 6.0rem);
+// Home page font sizes
+$font-text-sm: 1rem;
+$font-text-med: 1.125rem;
+$font-title-sm: clamp(3.0rem, -0.76470588235294rem + 18.82353vw, 6.0rem);
+$font-x-sm: clamp(0.390625rem, -0.078125rem + 2.50000vw, 0.578125rem);
 
 // Font weights
 $font-weight-sm: 600;
 
-// Fonts
+// Font colors
 $theme-accent-green: #00C48A;
 $theme-accent-purple : #AF1385;
 $theme-body-background: #F3F4F6;

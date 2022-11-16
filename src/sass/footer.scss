@@ -1,12 +1,44 @@
 @import "../sass/globals";
 
 .footer {
-    align-items: end;
+    align-items: center;
     background-color: $theme-heading;
     display: flex;
     color: $theme-light;
+    flex-direction: column;
     font-family: "Poppins", sans-serif;
     height: 120px;
-    justify-content: flex-end;
-    padding-right: 2em;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer__connections {
+    align-items: end;
+    display: flex;
+    flex-grow: 1;
+}
+
+.footer__copyright {
+    margin-right: 2em;
+}
+
+.footer__copyright-wrapper {
+    align-items: end;
+    align-self: end;
+    display: flex;
+    flex-grow: 1;
+    justify-self: end;
+}
+
+.footer__github-link {
+    margin-right: 1em;
+}
+
+.footer__github-picture {
+    justify-self: center;
+}
+
+.footer__twitter-picture {
+    height: 32px;
+    width: 32px;
 }

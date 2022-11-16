@@ -7,6 +7,15 @@ import "../sass/mobile_nav.scss";
 export default function MobileNav(): ReactElement {
     const [isOpen, setIsOpen] = useState(false);
 
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow += "hidden";
+        }
+        else {
+            document.body.style.overflow = "";
+        }
+    })
+
     function toggleMenu(): void {
       setIsOpen(isOpen => !isOpen);
     };

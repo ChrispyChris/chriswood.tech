@@ -1,8 +1,5 @@
 @import "./globals";
 
-$font-x-sm: clamp(0.390625rem, -0.078125rem + 2.50000vw, 0.578125rem);
-$font-sm: clamp(1.125rem, 0.625rem + 2.22222vw, 1.425rem);
-$font-weight-sm: 600;
 
 .blog__grid {
     color: $theme-body-text;
@@ -41,12 +38,12 @@ $font-weight-sm: 600;
 
 .blog__title {
     color: $theme-heading;
-    font-size: 3.30rem;
-    margin-top: 1em;
-    text-shadow: 1.5px 1px 1px black;
-}
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: $font-title-sm;
+    margin-top: 6rem;
 
-.blog__title-wrapper {
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+    @include screen-med {
+        margin-top: 4rem;
+    }
 }

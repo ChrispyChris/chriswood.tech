@@ -15,6 +15,7 @@ export default function Home(): ReactElement {
                 <li className="about__item">System administration.</li>
                 <li className="about__item">Webhosting/Server setup.</li>
                 <li className="about__item">Application and hosting management.</li>
+                <li className="about__item">Consulting.</li>
             </ul>
         </div>
       
