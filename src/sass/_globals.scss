@@ -37,8 +37,9 @@ $font-sm: clamp(1.125rem, 0.625rem + 2.22222vw, 1.425rem);
 $font-med: clamp(1.25rem, 0.625rem + 2.22222vw, 2.425rem);
 
 // Home page fonts
-$font-home-text-sm: clamp(1.0rem, -0.017543859649123rem + 5.61404vw, 2.0rem);
-$font-home-title-sm: clamp(3.5rem, -0.06140350877193rem + 19.64912vw, 7.0rem);
+$font-home-text-sm: 1rem;
+$font-home-text-med: 1.125rem;
+$font-home-title-sm: clamp(3.0rem, -0.76470588235294rem + 18.82353vw, 6.0rem);
 
 // Font weights
 $font-weight-sm: 600;
