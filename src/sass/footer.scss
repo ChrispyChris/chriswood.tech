@@ -13,7 +13,7 @@
 }
 
 .footer__connections {
-    align-items: end;
+    align-items: flex-end;
     display: flex;
     flex-grow: 1;
 }
@@ -23,11 +23,11 @@
 }
 
 .footer__copyright-wrapper {
-    align-items: end;
-    align-self: end;
+    align-items: flex-end;
+    align-self: flex-end;
     display: flex;
     flex-grow: 1;
-    justify-self: end;
+    justify-self: flex-end;
 }
 
 .footer__github-link {
