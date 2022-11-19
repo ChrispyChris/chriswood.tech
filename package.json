@@ -50,7 +50,7 @@
         "url": "mygithub:ChrispyChris/chriswoodtech.git"
     },
     "scripts": {
-        "build": "rm -rf ./public; vite build src; ./build.js",
+        "build": "rm -rf ./public; vite build src;",
         "clean": "rm -rf ./public",
         "dev": "vite serve src",
         "preview": "vite preview",

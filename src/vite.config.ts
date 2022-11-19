@@ -2,8 +2,9 @@ import { defineConfig } from "vite";
 import { createHtmlPlugin } from "vite-plugin-html";
 import react from "@vitejs/plugin-react";
 import { viteStaticCopy } from "vite-plugin-static-copy";
-import pluginListBlogPosts from "../plugins/rollup-plugin-list-blog-posts";
 import autoprefixer from "autoprefixer";
+import pluginListBlogPosts from "../plugins/rollup-plugin-list-blog-posts";
+import pluginParseFrontmatter from "../plugins/rollup-plugin-parse-frontmatter";
 
 export default defineConfig({
     build: {
@@ -34,6 +35,7 @@ export default defineConfig({
         pluginListBlogPosts({
             directory: "src/blog_posts/",
         }),
+        pluginParseFrontmatter(),
     ],
     preview: {
       port: 5173,
