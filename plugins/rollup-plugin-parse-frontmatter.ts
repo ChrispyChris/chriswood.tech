@@ -5,15 +5,17 @@ Title: Authoring in Markdoc
 ---`
 
 type TypeTestFunction = (char: string) => boolean;
-type TypeToken = "---" | "Title:" | "Author:" | "Date:" | "Newline" | "Unknown" | null;
+type TypeToken = "START" | "END" | "TITLE" | "AUTHOR" | "DATE" | "NEWLINE" | "UNKNOWN" | null;
 
 class TokenStream {
     private _tokenArray: Token[];
     private _streamObject: InputStream;
+    private _isStart: boolean;
 
     public constructor(frontmatter: string) {
         this._streamObject = new InputStream(frontmatter);
         this._tokenArray = [];
+        this._isStart = true;
     }
 
     public buildTokenArray(): void {
@@ -21,6 +23,7 @@ class TokenStream {
         while (working) {
             const token = this.getNextToken();
             console.log(token);
+            console.log("==============================");
             console.log(token.toString());
             if (token.tokenType === null) {
                 working = false;
@@ -31,6 +34,8 @@ class TokenStream {
         }
     }
 
+    // Advances the current position of the cursor in the input stream by one position.
+    // If the next character in the stream is a newline, advance the line count by one.
     private feedNextChar(): string {
         let char: string = this._streamObject.frontmatter[this._streamObject.streamPosition + 1];
         if (char === "\n") {
@@ -62,25 +67,30 @@ class TokenStream {
     private parseStartEndDelimiter(): Token {
         let token: Token = new Token();
         token.value += this.parseWhile(this.testStartEndDelimiter.bind(this));
-        token.tokenType = "---";
+        if (this._isStart) {
+            token.tokenType = "START";
+        }
+        else {
+            token.tokenType = "END";
+        }
         return token;
     }
 
     private parseTitle(): Token {
         let token: Token = new Token();
         token.value += this.parseWhile(this.testUntilNewLine.bind(this))
-        token.tokenType = "Title:";
+        token.tokenType = "TITLE";
         return token;
     }
 
     private parseWhile(TestFunction: TypeTestFunction): string {
         let char = this._streamObject.peek();
-        let token: string = "";
+        let lexeme: string = "";
         while (!this._streamObject.eof() && TestFunction(char)) {
-            token += char;
+            lexeme += char;
             char = this.feedNextChar();
         }
-        return token;
+        return lexeme;
     }
 
     public printTokenArray(): void {
@@ -134,12 +144,12 @@ class TokenStream {
 class InputStream {
     public currentColumn: number;
     public currentLine: number;
+    public frontmatter: string;
     public nextColumn: number;
     public streamPosition: number;
-    public frontmatter: string;
 
     public constructor(frontmatter: string) {
-        this.currentColumn = 0;
+        this.currentColumn = 1;
         this.currentLine = 1;
         this.frontmatter = frontmatter;
         this.nextColumn = this.currentColumn + 1;;
@@ -154,7 +164,7 @@ class InputStream {
 
     public advanceLine(): void {
        this.currentLine += 1;
-       this.currentColumn = 0;
+       this.currentColumn = 1;
        this.nextColumn = this.currentColumn + 1;
        this.streamPosition += 2;
     }
@@ -164,7 +174,8 @@ class InputStream {
         return this.peek() == "";
     }
 
-    // Return the next character without removing it from stream.
+    // Return the character under the cursor in the input stream. Do not advance
+    // the input stream position.
     public peek(): string {
         return this.frontmatter.charAt(this.streamPosition);
     }
@@ -175,11 +186,11 @@ class Token {
     public tokenType: TypeToken;
     public value: string;
 
-    // If a value is passed in, assign the token type to Unknown as it is an
+    // If a value is passed in, assign the token type to UNKNOWN as it is an
     // error token with an error message; otherwise, initialize a new token.
     public constructor(literalValue?: string){
         if (literalValue) {
-            this.tokenType = "Unknown";
+            this.tokenType = "UNKNOWN";
             this.value = literalValue;
         }
         else {
@@ -200,7 +211,7 @@ export default function pluginParseFrontmatter(){
             // Create new line for our output.
             console.log();
 
-            let MyLexer = new TokenStream(testFrontmatter);
+            const MyLexer = new TokenStream(testFrontmatter);
             MyLexer.buildTokenArray();
         },
     };
